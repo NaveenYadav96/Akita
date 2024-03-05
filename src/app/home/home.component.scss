@@ -1,0 +1,37 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #cecfce;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.icons {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.add-todo {
+  display: flex;
+  align-items: center;
+}
+
+.btn-add {
+  margin-left: 8px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

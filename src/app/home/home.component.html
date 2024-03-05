@@ -1,0 +1,24 @@
+<h1>Todos</h1>
+
+<div class="add-todo">
+  <p>Add Todos</p>
+  <button class="btn-add" (click)="addtodo()">Add</button>
+</div>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Status</th>
+    <th [colSpan]="2">Status</th>
+  </tr>
+
+  <tr *ngFor="let todo of todos$ | async">
+    <td>{{ todo.id }}</td>
+    <td>{{ todo.title }}</td>
+    <td>{{ todo.completed }}</td>
+    <td>
+      <img src="/assets/edit.svg" class="icons" alt="Edit icon" />
+    </td>
+    <td><img src="/assets/delete.svg" class="icons" alt="Delete icon" /></td>
+  </tr>
+</table>
