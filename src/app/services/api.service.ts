@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Todo } from '../model/todos.model';
 import { Observable, map, tap } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
-import { TodosStore } from '../state/todos.store';
+import { TodoStore } from '../state/todos.store';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-  constructor(private todoStore: TodosStore, private http: HttpClient) {}
+  constructor(private todoStore: TodoStore, private http: HttpClient) {}
 
   private readonly apiUrl: string = environment.apiUrl;
 

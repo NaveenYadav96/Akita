@@ -12,13 +12,15 @@
     <th [colSpan]="2">Status</th>
   </tr>
 
-  <tr *ngFor="let todo of todos$ | async">
+  <tr *ngFor="let todo of todosLists$ | async">
     <td>{{ todo.id }}</td>
     <td>{{ todo.title }}</td>
     <td>{{ todo.completed }}</td>
     <td>
       <img src="/assets/edit.svg" class="icons" alt="Edit icon" />
     </td>
-    <td><img src="/assets/delete.svg" class="icons" alt="Delete icon" /></td>
+    <td>
+      <img src="/assets/delete.svg" class="icons" alt="Delete icon" />
+    </td>
   </tr>
 </table>
